@@ -18,7 +18,7 @@ connection.connect();
 /**
  * APARTAT 1 - Canvia la query1
  */
-const query1 = "select * from products";
+ const query1 = "select * from products WHERE category='Dried Fruit & Nuts' AND minimum_reorder_quantity <= 10";
 
 connection.query(query1, function(error, results) {
     if (error) {
@@ -33,6 +33,11 @@ connection.query(query1, function(error, results) {
  * APARTAT 2 - Implementa aquí l'endpoint
  */
 
-/**
- * app.listen(3000);
- */
+ app.get('/', (req, res) => {
+    res.render('list-products', {
+        resultsQuery
+    });
+  })
+
+  app.listen(3000);
+ 

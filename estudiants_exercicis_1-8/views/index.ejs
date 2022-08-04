@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap" rel="stylesheet">
     <script src="/js/script.js" defer></script>
 
     <title>Load Countries</title>
@@ -13,22 +14,25 @@
 
 <body>
     <main>
+        <header>
+            <h1>Formulario de entrada de datos</h1>
+        </header>
         <div class="w3-container w3-row">
-            <form class="w3-container w3-card-4 w3-quarter">
+            <form class="w3-container w3-card-4 w3-quarter" method="post" action="/post-country/">
              <h2>Select Your Country</h2>
                 <br>
                 <label for="country">Contry Name: </label>
 
-                <select class="w3-select" id="country">
-                  <option value="" disabled selected>---</option>
+                <select class="w3-select" id="country" name="country">
+                  <option value="" disabled selected></option>
                   
                 </select>
 
                 <label for="population">Population: </label>
-                <input class="w3-input" type="number" id="population"></input>
+                <input class="w3-input" type="number" id="population" name="population"></input>
 
                 <label for="urlFlag">URL Flag: </label>
-                <input class="w3-input" type="text" id="urlFlag"></input>
+                <input class="w3-input" type="text" id="urlFlag" name="urlFlag"></input>
 
                 <p><input type="submit" class="w3-btn w3-teal"></input>
                 </p>
